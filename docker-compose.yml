@@ -16,3 +16,12 @@ services:
       NIFI_ZK_CONNECT_STRING: 0.0.0.0:2181
       NIFI_ELECTION_MAX_WAIT: 1 min
       NIFI_SENSITIVE_PROPS_KEY: 'sensitive_props_key'
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: nifi
+      POSTGRES_PASSWORD: nifi
+      POSTGRES_DB: nifi
+    ports:
+      - "5432:5432"
+
