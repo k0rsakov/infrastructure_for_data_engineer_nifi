@@ -1,0 +1,11 @@
+services:
+  nifi:
+    image: apache/nifi:1.19.0
+    container_name: nifi
+    ports:
+      - "8443:8443"
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
+      NIFI_WEB_HTTPS_PORT: 8443
+#    restart: always
